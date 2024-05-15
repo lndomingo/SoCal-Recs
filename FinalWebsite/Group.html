@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>For Bigger Groups</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <!-- Bootstrap Inclusion -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        dropdownToggle.forEach(function(el) {
+    el.addEventListener('mouseenter', function(event) {
+        var dropdownMenu = this.querySelector('.dropdown-menu');
+        dropdownMenu.classList.add('show');
+    });
+
+    el.addEventListener('mouseleave', function(event) {
+        var dropdownMenu = this.querySelector('.dropdown-menu');
+        dropdownMenu.classList.remove('show');
+    });
+});
+
+
+            // Submit search form
+            var searchForm = document.querySelector('.search-form');
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                var searchTerm = this.querySelector('input[type="search"]').value;
+                // Do something with the search term, for example:
+                alert('You searched for: ' + searchTerm);
+            });
+    </script>
+    <style>
+        [class*="col"] {
+        padding: 1rem;
+        background-color: #ffffff00;
+        border: 2px solid #ffffff00;
+        color: #000000;
+        text-align: center;
+        }
+
+    @media (max-width: 991.98px) {
+        .search-form {
+            position: relative;
+            left: auto;
+            right: 0;
+            width: 100%;
+        }
+    }
+    .btn-pink {
+        color: #ec509e;
+        background-color: transparent;
+        border-color: #ec509e;
+    }
+    .btn-pink:hover {
+        color: #fff;
+        background-color: #ea2185;
+        border-color: #ea2185;
+    }
+    .btn-pink1 {
+        color: #ec509e;
+        background-color: transparent;
+        border-color: #ec509e;
+    }
+    .btn-pink1:hover {
+        color: #fff;
+        background-color: #ec509e;
+        border-color: #ec509e;
+    }
+
+    .square-image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+    overflow: hidden;
+  }
+
+  .square-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire container */
+    border-radius: 15px; /* Adding rounded corners */
+  }
+    </style>
+
+</head>
+<body>
+    <!--Horizontal Nav Bar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+        <div class="container-fluid">
+    
+            <a class="navbar-brand" href="home.html">
+                <img src="images/logo.png" alt="Logo" height="75">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Things to Do
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Food.html">Food</a></li>
+                            <li><a class="dropdown-item" href="Hiking.html">Hiking</a></li>
+                            <li><a class="dropdown-item" href="Budget.html">Budget-Friendly</a></li>
+                            <li><a class="dropdown-item active" aria-current="page" href="Group.html">For Bigger Groups</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Register.html">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Resources.html">Resources Used</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--group-->
+    <div class="container mt-5">
+        <header class="text-center mb-4">
+          <h1>For Bigger Groups</h1>
+        </header>
+      
+        <section class="mb-5">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h3>Duffy Boat</h3>
+                    <p><strong>Location:</strong> 2901 W Coast Hwy
+                        Unit 160
+                        Newport Beach, CA 92663</p>
+                    <div class="square-image-container">
+                      <img src="images/duffy.JPG" alt="Duffy Boat" class="img-fluid rounded mb-3 square-image">
+                    </div>
+                    <p><strong>Description:</strong> Rent a duffy boat at Newport with your friends! Drive around the pier and blast some music.</p>
+                  </div>
+              <div class="col-md-6 mb-4">
+                <h3>Richard Nixon Library</h3>
+                <p><strong>Location:</strong> 18001 Yorba Linda Blvd
+                    Yorba Linda, CA 92886</p>
+                <div class="square-image-container">
+                  <img src="images/richardnixon.jpeg" alt="Richard Nixon Library" class="img-fluid rounded mb-3 square-image">
+                </div>
+                <p><strong>Description:</strong> Learn more about U.S. history at the Richard Nixon Library. Visit Nixon's family owned home and his final resting place.</p>
+              </div>
+              <div class="col-md-6 mb-4">
+                <h3>Axe Throwing</h3>
+                <p><strong>Location:</strong> 24400 Swartz Dr
+                    Lake Forest, CA  92630</p>
+                <div class="square-image-container">
+                  <img src="images/axethrowing.jpeg" alt="Axe Throwing" class="img-fluid rounded mb-3 square-image">
+                </div>
+                <p><strong>Description:</strong> Release some anger by throwing an axe! Compete against friends to see who can get the most bullseyes!</p>
+              </div>
+              <div class="col-md-6 mb-4">
+                <h3>Strawberry Picking</h3>
+                <p><strong>Location:</strong> 13406 Cypress Ave
+                    Chino, CA  91710</p>
+                <div class="square-image-container">
+                  <img src="images/strawberrypicking.jpeg" alt="Strawberry Picking" class="img-fluid rounded mb-3 square-image">
+                </div>
+                <p><strong>Description:</strong> Be a farmer for a day and pick your own fruit! These strawberries are fresher, redder, and tastier than those found in the market ... trust.</p>
+              </div>
+              <div class="col-md-6 mb-4">
+                <h3>Concert</h3>
+                <p><strong>Location:</strong> 3503 S Harbor Blvd
+                    Santa Ana, CA  92704</p>
+                <div class="square-image-container">
+                  <img src="images/concert.jpeg" alt="Concert" class="img-fluid rounded mb-3 square-image">
+                </div>
+                <p><strong>Description:</strong> Lose your voice at a concert! Whether it be a rising star or a pop sensation, a concert hits different when live.</p>
+              </div>
+              <div class="col-md-6 mb-4">
+                <h3>Ice Skating</h3>
+                <p><strong>Location:</strong> 1000 E Cerritos Ave
+                    Anaheim, CA  92805</p>
+                <div class="square-image-container">
+                  <img src="images/iceskating.jpeg" alt="Ice Skating" class="img-fluid rounded mb-3 square-image">
+                </div>
+                <p><strong>Description:</strong> ICE ICE BABY! Skate on the same ice as the professional Anahiem Ducks hockey team. Who knows, maybe you'll become discovered?</p>
+              </div>
+              <div class="col-md-6 mb-4">
+                <h3>Road Trip</h3>
+                <p><strong>Location:</strong> San Diego County
+                    California</p>
+                <div class="square-image-container">
+                  <img src="images/roadtrip.jpeg" alt="Road Trip" class="img-fluid rounded mb-3 square-image">
+                </div>
+                <p><strong>Description:</strong> Run up your car miles by going on a road trip! Create the ultimate roadtrip playlist and travel somewhere you've never been.</p>
+              </div>
+              <div class="col-md-6 mb-4">
+                <h3>Baseball Game</h3>
+                <p><strong>Location:</strong> 1000 Vin Scully Ave
+                    Los Angeles, CA 90012</p>
+                <div class="square-image-container">
+                  <img src="images/baseball.jpeg" alt="Baseball Game" class="img-fluid rounded mb-3 square-image">
+                </div>
+                <p><strong>Description:</strong> LET'S GO DODGERS!</p>
+              </div>
+            </div>
+          </section> 
+      </div>
+      
+    <!--Footer-->
+    <footer class="bg-body-tertiary text-center text-lg-start bottom">
+        <div class="text-center p-3" style="background-color: #ec509e78;">
+            © 2024 Domingo Copyright:
+            <a class="text-body" href="https://getbootstrap.com">getBootstrap.com</a>
+        </div>
+    </footer>
+</body>
+</html>

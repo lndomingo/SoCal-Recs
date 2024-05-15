@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Food</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <!-- Bootstrap Inclusion -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        dropdownToggle.forEach(function(el) {
+    el.addEventListener('mouseenter', function(event) {
+        var dropdownMenu = this.querySelector('.dropdown-menu');
+        dropdownMenu.classList.add('show');
+    });
+
+    el.addEventListener('mouseleave', function(event) {
+        var dropdownMenu = this.querySelector('.dropdown-menu');
+        dropdownMenu.classList.remove('show');
+    });
+});
+
+
+            // Submit search form
+            var searchForm = document.querySelector('.search-form');
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                var searchTerm = this.querySelector('input[type="search"]').value;
+                // Do something with the search term, for example:
+                alert('You searched for: ' + searchTerm);
+            });
+    </script>
+    <style>
+        [class*="col"] {
+        padding: 1rem;
+        background-color: #ffffff00;
+        border: 2px solid #ffffff00;
+        color: #000000;
+        text-align: center;
+        }
+
+    @media (max-width: 991.98px) {
+        .search-form {
+            position: relative;
+            left: auto;
+            right: 0;
+            width: 100%;
+        }
+    }
+    .btn-pink {
+        color: #ec509e;
+        background-color: transparent;
+        border-color: #ec509e;
+    }
+    .btn-pink:hover {
+        color: #fff;
+        background-color: #ea2185;
+        border-color: #ea2185;
+    }
+    .btn-pink1 {
+        color: #ec509e;
+        background-color: transparent;
+        border-color: #ec509e;
+    }
+    .btn-pink1:hover {
+        color: #fff;
+        background-color: #ec509e;
+        border-color: #ec509e;
+    }
+
+    .square-image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+    overflow: hidden;
+  }
+
+  .square-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire container */
+    border-radius: 15px; /* Adding rounded corners */
+  }
+    </style>
+
+</head>
+<body>
+    <!--Horizontal Nav Bar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+        <div class="container-fluid">
+    
+            <a class="navbar-brand" href="home.html">
+                <img src="images/logo.png" alt="Logo" height="75">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Things to Do
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" aria-current="page" href="Food.html">Food</a></li>
+                            <li><a class="dropdown-item" href="Hiking.html">Hiking</a></li>
+                            <li><a class="dropdown-item" href="Budget.html">Budget-Friendly</a></li>
+                            <li><a class="dropdown-item" href="Group.html">For Bigger Groups</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Register.html">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Resources.html">Resources Used</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--food-->
+    <div class="container mt-5">
+        <header class="text-center mb-4">
+          <h1>Food</h1>
+        </header>
+      
+        <section class="mb-5">
+            <h2 class="text-center mb-4">Locally-owned</h2>
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <h3>Won Kok Dim Sum</h3>
+                <p><strong>Location:</strong> 210 Alpine St
+                    Los Angeles, CA  90012</p>
+                <div class="square-image-container">
+                  <img src="images/wonkokdimsum.jpeg" alt="Won Kok Dim Sum" class="img-fluid rounded mb-3 square-image">
+                </div>
+                <p><strong>Description:</strong> The BEST and CHEAPEST dim sim you can find. Won Kok Dim Sum sells food less than a dollar each item. This small business can be found in the heart of LA. It's just a window and always has a line no matter the time of day because it's THAT good!</p>
+              </div>
+              <div class="col-md-6 mb-4">
+                <h3>Ruby BBQ Food</h3>
+                <p><strong>Location:</strong> 9567 E Garvey Ave
+                    Unit 1&2
+                    South El Monte, CA 91733</p>
+                <div class="square-image-container">
+                  <img src="images/rubybbqfood.jpeg" alt="Ruby BBQ Food" class="img-fluid rounded mb-3 square-image">
+                </div>
+                <p><strong>Description:</strong> A cash only, family owned business. Order anything here and you can never go wrong. Everything is amazing and the owners are the sweetest.</p>
+              </div>
+              <div class="col-md-6 mb-4">
+                <h3>Fratellinos</h3>
+                <p><strong>Location:</strong> 600 S Brea Blvd
+                    Brea, CA 92821</p>
+                <div class="square-image-container">
+                  <img src="images/fratellinos.jpeg" alt="Fratellinos" class="img-fluid rounded mb-3 square-image">
+                </div>
+                <p><strong>Description:</strong> A locally-owned italian restraunt. Originally named Lomelli's turned to Fratellino's. If you need to try anything, try the cappuccino ice cream! It's coffee ice cream with REAL coffee beans!!</p>
+              </div>
+              <div class="col-md-6 mb-4">
+                <h3>Avalon Bagels</h3>
+                <p><strong>Location:</strong> 16961 E Imperial Hwy
+                    Yorba Linda, CA  92886</p>
+                <div class="square-image-container">
+                  <img src="images/avalonbagels.jpeg" alt="Avalon Bagels" class="img-fluid rounded mb-3 square-image">
+                </div>
+                <p><strong>Description:</strong> My go-to whenever a friend asks, "Where should we go?" With only two locations, Avalon Bagels is a town favorite. From the fresh smoothies to the bacon melts, everything on the menu is a must have.</p>
+              </div>
+            </div>
+          </section>
+        
+      
+          <section class="mb-5">
+            <h2 class="text-center mb-4">Sweet Treats</h2>
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <h3>Yogurtland</h3>
+                <p><strong>Location:</strong> 730 E Imperial Hwy
+                    Brea, CA  92821</p>
+                <div class="square-image-container">
+                  <img src="images/yogurtland.jpeg" alt="Yogurtland" class="img-fluid rounded mb-3 square-image">
+                </div>
+                <p><strong>Description:</strong> Go here Februrary 6 to celebrate National Frozen Yogurt Day and buy one, get one free!</p>
+              </div>
+              <div class="col-md-6 mb-4">
+                <h3>Extraordinary Desserts</h3>
+                <p><strong>Location:</strong> 1430 Union St
+                    San Diego, CA  92101</p>
+                <div class="square-image-container">
+                  <img src="images/extraordinarydesserts.jpeg" alt="Extraordinary Desserts" class="img-fluid rounded mb-3 square-image">
+                </div>
+                <p><strong>Description:</strong> SD's favorite dessert place! From danishes, cookies, and cakes, Extraordinary Desserts truly is EXTRAORDINARY!</p>
+              </div>
+              <div class="col-md-6 mb-4">
+                <h3>Bruster's Real Ice Cream</h3>
+                <p><strong>Location:</strong> 20461 Yorba Linda Blvd
+                    Yorba Linda, CA  92886</p>
+                <div class="square-image-container">
+                  <img src="images/brusters.jpeg" alt="Bruster’s Real Ice Cream" class="img-fluid rounded mb-3 square-image">
+                </div>
+                <p><strong>Description:</strong> Ice cream made the old-fashioned way! Sample one or everything, Bruster's handcrafted ice creams are made fresh.</p>
+              </div>
+              <div class="col-md-6 mb-4">
+                <h3>Seaside Donuts</h3>
+                <p><strong>Location:</strong> 2108 W Oceanfront
+                    Newport Beach, CA  92663</p>
+                <div class="square-image-container">
+                  <img src="images/seaside.jpeg" alt="Seaside Donuts" class="img-fluid rounded mb-3 square-image">
+                </div>
+                <p><strong>Description:</strong> Open 24 hours, 7 days a week. Seaside Donuts Bakery rests along the Newport Beach housing donuts, drinks, and delicious bakery goods.</p>
+              </div>
+            </div>
+          </section>
+      </div>
+
+    <!--Footer-->
+    <footer class="bg-body-tertiary text-center text-lg-start bottom">
+        <div class="text-center p-3" style="background-color: #ec509e78;">
+            © 2024 Domingo Copyright:
+            <a class="text-body" href="https://getbootstrap.com">getBootstrap.com</a>
+        </div>
+    </footer>
+</body>
+</html>

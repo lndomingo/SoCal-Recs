@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <!-- Bootstrap Inclusion -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <style>
+            [class*="col"] {
+        padding: 1rem;
+        background-color: #ffffff00;
+        border: 2px solid #ffffff00;
+        color: #000000;
+        text-align: center;
+        }
+        body {
+            background-color: #ffffffb9;
+        }
+        .content {
+            background-color: #ec509e80;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-top: 30px;
+        }
+        .failure-icon,
+        .success-icon {
+            display: none;
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+        }
+        .failure-icon {
+            color: #dc3545;
+        }
+        .success-icon {
+            color: #28a745;
+        }
+        .error {
+            color: #dc3545;
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html">
+                <img src="images/logo.png" alt="Logo" height="75">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Things to Do
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Food.html">Food</a></li>
+                            <li><a class="dropdown-item" href="Hiking.html">Hiking</a></li>
+                            <li><a class="dropdown-item" href="Budget.html">Budget-Friendly</a></li>
+                            <li><a class="dropdown-item" href="Group.html">For Bigger Groups</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Register.html">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Resources.html">Resources Used</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Registration Content -->
+    <div class="container">
+        <h1 class="text-center mt-5 mb-4">Register</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="content">
+                    <div class="text-center mb-4">
+                        <h3>Join the mailing list!</h3>
+                    </div>
+                    <form id="form" onsubmit="return validateForm()">
+                        <!-- Name Input -->
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                            <i class="fas fa-exclamation-circle failure-icon"></i>
+                            <i class="far fa-check-circle success-icon"></i>
+                            <div class="error" id="name-error"></div>
+                        </div>
+
+                        <!-- Email Input -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                            <i class="fas fa-exclamation-circle failure-icon"></i>
+                            <i class="far fa-check-circle success-icon"></i>
+                            <div class="error" id="email-error"></div>
+                        </div>
+
+                        <!-- Confirm Email Input -->
+                        <div class="mb-3">
+                            <label for="confirm-email" class="form-label">Confirm Email</label>
+                            <input type="email" class="form-control" id="confirm-email" placeholder="Confirm your email">
+                            <i class="fas fa-exclamation-circle failure-icon"></i>
+                            <i class="far fa-check-circle success-icon"></i>
+                            <div class="error" id="confirm-email-error"></div>
+                        </div>
+
+                        <button type="submit" id="submit" class="btn btn-pink btn-block">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thank You Message -->
+    <div id="thank-you" class="container mt-4" style="display: none;">
+        <div class="alert alert-success" role="alert">
+            Thank you for filling out the form!
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var confirmEmail = document.getElementById("confirm-email").value;
+            var nameError = document.getElementById("name-error");
+            var emailError = document.getElementById("email-error");
+            var confirmEmailError = document.getElementById("confirm-email-error");
+            var isValid = true;
+
+            // Reset errors
+            nameError.textContent = "";
+            emailError.textContent = "";
+            confirmEmailError.textContent = "";
+
+            // Validate name
+            if (name === "") {
+                nameError.textContent = "Name is required";
+                isValid = false;
+            }
+
+            // Validate email
+            if (email === "") {
+                emailError.textContent = "Email is required";
+                isValid = false;
+            } else if (!isValidEmail(email)) {
+                emailError.textContent = "Invalid email address";
+                isValid = false;
+            }
+
+            // Validate confirm email
+            if (confirmEmail === "") {
+                confirmEmailError.textContent = "Confirm email is required";
+                isValid = false;
+            } else if (email !== confirmEmail) {
+                confirmEmailError.textContent = "Emails do not match";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        function isValidEmail(email) {
+            // Simple email validation regex
+            var emailRegex = /\S+@\S+\.\S+/;
+            return emailRegex.test(email);
+        }
+    </script>
+<!-- Footer -->
+<footer class="bg-body-tertiary text-center text-lg-start fixed-bottom">
+    <div class="text-center p-3" style="background-color: #ec509e78;">
+        © 2024 Domingo Copyright:
+        <a class="text-body" href="https://getbootstrap.com">getBootstrap.com</a>
+    </div>
+</footer>
+
+</body>
+</html>

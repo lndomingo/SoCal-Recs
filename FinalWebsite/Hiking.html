@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Hiking</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <!-- Bootstrap Inclusion -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        dropdownToggle.forEach(function(el) {
+    el.addEventListener('mouseenter', function(event) {
+        var dropdownMenu = this.querySelector('.dropdown-menu');
+        dropdownMenu.classList.add('show');
+    });
+
+    el.addEventListener('mouseleave', function(event) {
+        var dropdownMenu = this.querySelector('.dropdown-menu');
+        dropdownMenu.classList.remove('show');
+    });
+});
+
+
+            // Submit search form
+            var searchForm = document.querySelector('.search-form');
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                var searchTerm = this.querySelector('input[type="search"]').value;
+                // Do something with the search term, for example:
+                alert('You searched for: ' + searchTerm);
+            });
+    </script>
+    <style>
+        [class*="col"] {
+        padding: 1rem;
+        background-color: #ffffff00;
+        border: 2px solid #ffffff00;
+        color: #000000;
+        text-align: center;
+        }
+
+    @media (max-width: 991.98px) {
+        .search-form {
+            position: relative;
+            left: auto;
+            right: 0;
+            width: 100%;
+        }
+    }
+    .btn-pink {
+        color: #ec509e;
+        background-color: transparent;
+        border-color: #ec509e;
+    }
+    .btn-pink:hover {
+        color: #fff;
+        background-color: #ea2185;
+        border-color: #ea2185;
+    }
+    .btn-pink1 {
+        color: #ec509e;
+        background-color: transparent;
+        border-color: #ec509e;
+    }
+    .btn-pink1:hover {
+        color: #fff;
+        background-color: #ec509e;
+        border-color: #ec509e;
+    }
+
+    .square-image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+    overflow: hidden;
+  }
+
+  .square-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire container */
+    border-radius: 15px; /* Adding rounded corners */
+  }
+
+
+    </style>
+
+</head>
+<body>
+    <!--Horizontal Nav Bar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+        <div class="container-fluid">
+    
+            <a class="navbar-brand" href="home.html">
+                <img src="images/logo.png" alt="Logo" height="75">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Things to Do
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Food.html">Food</a></li>
+                            <li><a class="dropdown-item active" aria-current="page" href="Hiking.html">Hiking</a></li>
+                            <li><a class="dropdown-item" href="Budget.html">Budget-Friendly</a></li>
+                            <li><a class="dropdown-item" href="Group.html">For Bigger Groups</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Register.html">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Resources.html">Resources Used</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--hiking-->
+    <div class="container mt-5">
+        <header class="text-center mb-4">
+          <h1>Hiking</h1>
+        </header>
+      
+        <section class="mb-5">
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <h3>Eaton Canyon</h3>
+                <p><strong>Location:</strong> 1750 N Altadena Dr
+                    Pasadena, CA 91107</p>
+                <div class="square-image-container">
+                  <img src="images/eatoncanyon.jpeg" alt="Eaton Canyon" class="img-fluid rounded mb-3 square-image">
+                </div>
+                <p><strong>Description:</strong> Going to Eaton Canyon after it rains is the VIBE! Expect to get your feet wet and a reward of a beautiful natural waterfall.</p>
+              </div>
+              <div class="col-md-6 mb-4">
+                <h3>Hollywood Sign</h3>
+                <p><strong>Location:</strong> Hollywood Hills
+                    Los Angeles, CA</p>
+                <div class="square-image-container">
+                  <img src="images/hollywoodsign.jpeg" alt="Hollywood sign" class="img-fluid rounded mb-3 square-image">
+                </div>
+                <p><strong>Description:</strong> There's something about the summershine, baby! It's a hollywood dream, featuring a 6 mile trail loop to see the iconic Hollywood sign. This is a MUST if you live in SoCal.</p>
+              </div>
+              <div class="col-md-6 mb-4">
+                <h3>Easy Street</h3>
+                <p><strong>Location:</strong> 3605 Blue Gum Dr
+                    Yorba Linda, CA  92886</p>
+                <div class="square-image-container">
+                  <img src="images/easystreet.jpeg" alt="Easy Street trail" class="img-fluid rounded mb-3 square-image">
+                </div>
+                <p><strong>Description:</strong> A local trail that homes frogs, bunnies, rattle snakes, and spiders. This trail feels like an escape from the city even though it really isn't!</p>
+              </div>
+              <div class="col-md-6 mb-4">
+                <h3>Top of the World</h3>
+                <p><strong>Location:</strong> Quarter Horse Dr
+                    Yorba Linda, CA  92886</p>
+                <div class="square-image-container">
+                  <img src="images/topoftheworld.jpeg" alt="Top of the World trail" class="img-fluid rounded mb-3 square-image">
+                </div>
+                <p><strong>Description:</strong> Get a 360 degree view of the city of Yorba Linda. To the right is the high school and to the left is the sun setting.</p>
+              </div>
+              <div class="col-md-6 mb-4">
+                <h3>Panorama View</h3>
+                <p><strong>Location:</strong> 2000 E Bastanchury Rd
+                    Fullerton, CA 92835</p>
+                <div class="square-image-container">
+                  <img src="images/panorama.jpeg" alt="Panorama view" class="img-fluid rounded mb-3 square-image">
+                </div>
+                <p><strong>Description:</strong> Here lies a bench and patch of grass with the perfect view for a perfect sun set.</p>
+              </div>
+            </div>
+          </section>
+      </div>
+      
+    <!--Footer-->
+    <footer class="bg-body-tertiary text-center text-lg-start bottom">
+        <div class="text-center p-3" style="background-color: #ec509e78;">
+            © 2024 Domingo Copyright:
+            <a class="text-body" href="https://getbootstrap.com">getBootstrap.com</a>
+        </div>
+    </footer>
+</body>
+</html>
